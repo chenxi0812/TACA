@@ -8,6 +8,8 @@ import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -20,6 +22,7 @@ import cn.springboot.config.db.database.DynamicDataSourceRegister;
 @ServletComponentScan
 @SpringBootApplication
 @EnableScheduling
+@ComponentScan(basePackages = "com.taca")
 public class Application extends SpringBootServletInitializer {
     
     public static void main(String[] args) {

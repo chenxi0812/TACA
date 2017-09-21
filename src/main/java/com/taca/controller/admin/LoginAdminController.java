@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("mobile/")
+@RequestMapping("adminPage/")
 public class LoginAdminController {
 
     private static final Logger log = LoggerFactory.getLogger(cn.springboot.controller.LoginController.class);
@@ -26,11 +26,12 @@ public class LoginAdminController {
     private ShoppingBusService shoppingBusService;
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    String login(Model model) {
+    public String login(Model model) {
 
         model.addAttribute("user", new User());
-        shoppingBusService.doShopping();
         userInfoService.getUserById(1);
+        shoppingBusService.doShopping();
+
         log.info("#去登录");
         return "view/login/login";
     }

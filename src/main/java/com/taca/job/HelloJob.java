@@ -28,12 +28,12 @@ public class HelloJob {
     @Scheduled(cron="*/5 * * * * ?")
     public void alert(){
 
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(Sender);
-        message.setTo("473816910@qq.com"); //自己给自己发送邮件
-        message.setSubject("主题：简单邮件");
-        message.setText("测试邮件内容");
-        javaMailSender.send(message);
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setFrom(Sender);
+//        message.setTo("473816910@qq.com"); //自己给自己发送邮件
+//        message.setSubject("主题：简单邮件");
+//        message.setText("测试邮件内容");
+//        javaMailSender.send(message);
         LOGGER.info("邮件发送成功");
     }
 }
