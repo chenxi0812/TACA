@@ -16,7 +16,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Autowired
     private UserInfoMapper userInfoMapper;
     @Override
-    public UserInfo getUserById(Integer userId) {
-        return userInfoMapper.getUserById(userId);
+    public UserInfo getUserById(Long userId) {
+        return userInfoMapper.selectByPrimaryKey(userId);
     }
 }

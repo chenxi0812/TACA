@@ -7,5 +7,5 @@ import com.taca.model.UserInfo;
  */
 public interface UserInfoService {
 
-    public UserInfo getUserById(Integer userId);
+    public UserInfo getUserById(Long userId);
 }

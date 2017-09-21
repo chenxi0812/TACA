@@ -25,12 +25,13 @@ public class LoginAdminRestController {
     @Autowired
     private ShoppingBusService shoppingBusService;
 
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-   public String login(Model model) {
 
-        model.addAttribute("user", new User());
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+   public String login() {
+
+//        model.addAttribute("user", new User());
         shoppingBusService.doShopping();
-        userInfoService.getUserById(1);
+        userInfoService.getUserById(1L);
         log.info("#去登录");
         return "view/login/login";
     }

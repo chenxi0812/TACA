@@ -17,10 +17,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import cn.springboot.config.db.database.DynamicDataSourceRegister;
 
+@SpringBootApplication
+@EnableAspectJAutoProxy
 @Import({ DynamicDataSourceRegister.class })
 @EnableTransactionManagement
 @ServletComponentScan
-@SpringBootApplication
 @EnableScheduling
 @ComponentScan(basePackages = "com.taca")
 public class Application extends SpringBootServletInitializer {

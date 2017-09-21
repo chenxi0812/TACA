@@ -28,7 +28,7 @@ private static final Logger LOGGER = LoggerFactory.getLogger(ControllerAop.class
      * @param pjp
      * @return
      */
-    @Pointcut("execution(* com.taca.controller.admin.LoginAdminRestController.*(..))")
+    @Pointcut("execution(* com.taca.controller.admin.LoginAdminRestController.login())")
     public Object handlerControllerMethod(ProceedingJoinPoint pjp) {
         LOGGER.info("start AOP"+new Date());
         long startTime = System.currentTimeMillis();

@@ -29,7 +29,7 @@ public class LoginAdminController {
     public String login(Model model) {
 
         model.addAttribute("user", new User());
-        userInfoService.getUserById(1);
+        userInfoService.getUserById(1L);
         shoppingBusService.doShopping();
 
         log.info("#去登录");
