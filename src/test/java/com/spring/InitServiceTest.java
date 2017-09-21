@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import cn.springboot.Application;
+import com.taca.Application;
 import cn.springboot.config.shiro.vo.PermissionEnumUtil;
 import cn.springboot.config.shiro.vo.RoleEnumUtil;
 import cn.springboot.model.auth.Permission;

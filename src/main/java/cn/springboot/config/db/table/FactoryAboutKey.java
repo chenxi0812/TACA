@@ -27,7 +27,7 @@ import cn.springboot.service.key.KeyService;
  * @author 王鑫 
  * @date Apr 12, 2017 1:59:40 PM  
  */
-@Component
+//@Component
 public class FactoryAboutKey {
 
     private static final Logger log = LoggerFactory.getLogger(FactoryAboutKey.class);

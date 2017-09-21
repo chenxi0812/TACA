@@ -1,13 +1,13 @@
 package cn.springboot.config.db.database;
 
-/** 
+/**
  * @Description 数据源枚举常量类
- * @author 王鑫 
- * @date Mar 17, 2017 2:00:22 PM  
+ * @author 王鑫
+ * @date Mar 17, 2017 2:00:22 PM
  */
 public enum DataSourceEnum {
 
-    DB1("db1", "数据源1"), 
+    DB1("db1", "数据源1"),
     DB2("db2", "数据源2");
 
     private DataSourceEnum(String key, String description) {
