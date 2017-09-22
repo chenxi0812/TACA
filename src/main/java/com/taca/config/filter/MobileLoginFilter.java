@@ -23,7 +23,6 @@ public class MobileLoginFilter implements Filter{
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        LOGGER.info(((HttpServletRequest)servletRequest).getRequestURI().toString());
         filterChain.doFilter(servletRequest,servletResponse);
     }
 

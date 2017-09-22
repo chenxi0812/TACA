@@ -9,8 +9,6 @@ import java.io.Serializable;
  */
 public class ResultBean<T> implements Serializable {
 
-    public static final String SUCCESS="000000";
-    public static final String FAIL="111111";
     private T data;
     private String code;
     private String message;

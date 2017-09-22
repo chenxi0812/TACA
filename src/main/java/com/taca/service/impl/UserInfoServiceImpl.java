@@ -1,5 +1,7 @@
 package com.taca.service.impl;
 
+import com.taca.common.constants.IMResp;
+import com.taca.common.exception.DBException;
 import com.taca.mapper.UserInfoMapper;
 import com.taca.model.UserInfo;
 import com.taca.service.UserInfoService;
@@ -17,6 +19,10 @@ public class UserInfoServiceImpl implements UserInfoService {
     private UserInfoMapper userInfoMapper;
     @Override
     public UserInfo getUserById(Long userId) {
-        return userInfoMapper.selectByPrimaryKey(userId);
+        UserInfo userInfo= new UserInfo();
+        userInfo.setGroupName("ndadad");
+        userInfo.setNickName("shaxiaozi");
+//        throw new DBException(IMResp.DBEXCEPTION);
+        return userInfo;
     }
 }

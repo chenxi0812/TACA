@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("mobilePage/")
+@RequestMapping("mobile/page")
 public class LoginMobileController {
 
     private static final Logger log = LoggerFactory.getLogger(LoginMobileController.class);

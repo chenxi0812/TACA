@@ -2,6 +2,7 @@ package com.taca.controller.mobile;
 
 import cn.springboot.model.auth.User;
 import com.taca.busservice.ShoppingBusService;
+import com.taca.common.bean.ResultBean;
 import com.taca.service.UserInfoService;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("mobileRest/")
+@RequestMapping("mobile/rest")
 public class LoginMobileRestController {
 
     private static final Logger log = LoggerFactory.getLogger(LoginMobileRestController.class);
@@ -26,13 +27,8 @@ public class LoginMobileRestController {
     private ShoppingBusService shoppingBusService;
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
-    String login(Model model) {
-
-        model.addAttribute("user", new User());
-        shoppingBusService.doShopping();
-        userInfoService.getUserById(1L);
-        log.info("#去登录");
-        return "view/login/login";
+    public ResultBean login(Model model) {
+        return new ResultBean(userInfoService.getUserById(1L));
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

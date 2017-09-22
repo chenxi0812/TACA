@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("adminPage/")
+@RequestMapping("admin/page")
 public class LoginAdminController {
 
     private static final Logger log = LoggerFactory.getLogger(cn.springboot.controller.LoginController.class);
