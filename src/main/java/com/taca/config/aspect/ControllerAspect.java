@@ -26,7 +26,23 @@ import java.util.Date;
 public class ControllerAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(ControllerAspect.class);
 
+
     // 定义切点Pointcut
+    @Pointcut("execution(java.lang.String com.taca.controller..*(..))")
+    private void excudeServicePage() {
+    }
+    @Around("excudeServicePage()")
+    public Object pageAspect(ProceedingJoinPoint pjp) throws Throwable {
+        LOGGER.debug("controller页面跳转异常处理切面执行开始，时间{}",new Date());
+        try {
+            return pjp.proceed();
+        } catch (Throwable e) {
+            LOGGER.info("页面跳转出错",e);
+            return "error/500.ftl";
+        }
+
+    }
+
     @Pointcut("execution(com.taca.common.bean.* com.taca.controller..*(..))")
     private void excudeService() {
     }
