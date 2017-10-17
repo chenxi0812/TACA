@@ -64,10 +64,13 @@ public class UUIDUtil {
 		String random32 = getRandom32PK();
 		return random32.substring(0, random32.length() - 17) + timeStr;
 	}
-
+	public static int  getRandom(){
+		return 1+(int)(Math.random()*1000000);
+	}
 	public static void main(String[] args) {
 		System.out.println("随机" + cn.springboot.common.util.UUIDUtil.getRandom32PK().length() + "位：" + cn.springboot.common.util.UUIDUtil.getRandom32PK());
 		System.out.println("随机" + cn.springboot.common.util.UUIDUtil.getRandom32BeginTimePK().length() + "位以时间打头：" + cn.springboot.common.util.UUIDUtil.getRandom32BeginTimePK());
 		System.out.println("随机" + cn.springboot.common.util.UUIDUtil.getRandom32EndTimePK().length() + "位以时间结尾：" + cn.springboot.common.util.UUIDUtil.getRandom32EndTimePK());
+		System.out.println("验证码为："+getRandom());
 	}
 }

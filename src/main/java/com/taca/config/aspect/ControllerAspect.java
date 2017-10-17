@@ -38,7 +38,7 @@ public class ControllerAspect {
             return pjp.proceed();
         } catch (Throwable e) {
             LOGGER.info("页面跳转出错",e);
-            return "error/500.ftl";
+            return "mobile/error/500.ftl";
         }
 
     }

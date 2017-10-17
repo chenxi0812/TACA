@@ -1,5 +1,6 @@
 package com.taca.common.bean;
 
+import com.taca.common.constants.IMResp;
 import org.springframework.context.annotation.Bean;
 
 import java.io.Serializable;
@@ -32,7 +33,10 @@ public class ResultBean<T> implements Serializable {
     public ResultBean(){
     }
 
-
+    public ResultBean(IMResp imResp){
+        this.code=imResp.getCode();
+        this.message=imResp.getMessage();
+    }
     public ResultBean(T data) {
         this.data = data;
     }
@@ -43,5 +47,14 @@ public class ResultBean<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "ResultBean{" +
+                "data=" + data +
+                ", code='" + code + '\'' +
+                ", message='" + message + '\'' +
+                '}';
     }
 }

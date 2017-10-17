@@ -5,4 +5,8 @@ package com.taca.common.constants;
  */
 public class AdminConstants {
 
+	public  static final String TASK_STATUS_ON="ON";
+	public  static final String TASK_STATUS_OFF="OFF";
+	public static final  String ADMIN_NAME = "admin";
+	public static final  String PASSWORD = "admin";
 }

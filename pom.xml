@@ -209,6 +209,18 @@
 			<scope>true</scope>
 		</dependency>
 
+		<!-- poi 解析生成excel文件-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.8</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

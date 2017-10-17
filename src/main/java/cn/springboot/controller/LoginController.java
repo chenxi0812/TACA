@@ -29,7 +29,7 @@ public class LoginController {
     String login(Model model) {
         model.addAttribute("user", new User());
         log.info("#去登录");
-        return "view/login/login";
+        return "mobile/GoodsDetail";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

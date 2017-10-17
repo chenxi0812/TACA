@@ -20,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class LoginMobileRestController {
 
     private static final Logger log = LoggerFactory.getLogger(LoginMobileRestController.class);
+
     @Autowired
     private UserInfoService userInfoService;
 
@@ -28,7 +29,7 @@ public class LoginMobileRestController {
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public ResultBean login(Model model) {
-        return new ResultBean(userInfoService.getUserById(1L));
+        return new ResultBean();
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

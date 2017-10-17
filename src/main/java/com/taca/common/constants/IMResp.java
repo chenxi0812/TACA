@@ -5,9 +5,33 @@ package com.taca.common.constants;
  */
 public enum IMResp {
 
-
-
-    SUCCESS("000000","返回成功"),
+    SUCCESS("000000","操作成功"),
+    FIELD_IS_NULL("000001","字段为空"),
+    RECEIVE_OVERFLOW("000002","领取次数达到上限"),
+    TASK_IS_DOING("000003","任务正在进行中"),
+    TASK_IS_MUTEX("000004","存在互斥任务"),
+    Goods_LOW_STOCK("000005","商品库存不足"),
+    PARAM_NULL("000006","必要参数为空"),
+    PIC_WRONG("000007","图片格式错误"),
+    FILT_SAVE("000008","保存图片异常"),
+    FILT_NOT_FOUND("000009","文件不存在"),
+    PASSWORD_NOT_SAME("000010","两次输入的密码不一致"),
+    RANDOM_UNCORRECT("000011","验证码不正确"),
+    NOT_REGISTER("000012","该账号尚未注册"),
+    PASSWORD_UNCORRECT("000013","密码不正确"),
+    TEMPLATE_LOAD_ERROR("000014","邮件模板读取异常"),
+    FILE_SAVE_ERROR("000015","保存图片异常"),
+    FILE_NOT_FOUND("000016","文件不存在"),
+    DATA_EXISTS("000017","数据已存在"),
+    FILE_ERROR("000018","文件格式错误"),
+    ACCOUNT_IS_ILLEGAL("000019","账号非法"),
+    FILE_NO("000020","请选择文件"),
+    USERNAME_IS_NULL("000021","请输入UM账号"),
+    STAR_IS_LOWER("000022","星点不足,快去领取任务吧~~"),
+    FILE_READ_ERROR("000023","文件读取异常"),
+    CANNOT_CHOOSE_SELF("000024","不能选择自己互斥"),
+    UNLOGIN("000025","尚未登录，请先登录"),
+    HAD_REGISTER("000026","改账号已经注册"),
     DBEXCEPTION("555555","数据库异常"),
     FAIL("999999","系统异常"),
     ;

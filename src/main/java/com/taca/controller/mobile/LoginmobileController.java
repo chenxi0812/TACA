@@ -21,7 +21,7 @@ public class LoginMobileController {
     String login(Model model) {
         model.addAttribute("user", new User());
         log.info("#去登录");
-        return "view/login/login";
+        return "mobile/TaskList";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -34,7 +34,8 @@ public class LoginMobileController {
         SecurityUtils.getSubject().logout();
         return "view/login/login";
     }
-
-
-
+    @RequestMapping("index")
+    public String index(){
+        return "mobile/index";
+    }
 }

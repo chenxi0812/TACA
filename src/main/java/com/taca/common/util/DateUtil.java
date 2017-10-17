@@ -478,7 +478,10 @@ public class DateUtil {
         }
         return false;
     }
-
+    //计算时间差，返回相差的天数
+    public static long subDate(Date start,Date end){
+        return (end.getTime()-start.getTime())/(24 * 3600 * 1000);
+    }
     public static void main(String[] args) {
         Date currentTime = Calendar.getInstance().getTime();
         Date temp = firstDayOfMonth(currentTime);
